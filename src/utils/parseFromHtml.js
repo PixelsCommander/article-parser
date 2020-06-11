@@ -49,7 +49,9 @@ module.exports = async (input, links) => {
   info('Start parsing from HTML...');
   const html = cleanify(input);
 
-  console.log('HTML LENGTH', html.length);
+  if (html.length > 3000000) {
+    return null;
+  }
 
   const meta = extractMetaData(html);
 
