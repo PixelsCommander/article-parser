@@ -50,6 +50,7 @@ module.exports = async (input, links) => {
   const html = cleanify(input);
 
   if (html.length > 3000000) {
+    console.log('HTML is too long', html.length);
     return null;
   }
 
