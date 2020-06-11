@@ -48,6 +48,9 @@ const getSource = (source, uri) => {
 module.exports = async (input, links) => {
   info('Start parsing from HTML...');
   const html = cleanify(input);
+
+  console.log('HTML LENGTH', html.length);
+
   const meta = extractMetaData(html);
 
   const {
